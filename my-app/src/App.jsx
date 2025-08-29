@@ -68,7 +68,7 @@ function App() {
                   </span>
                   <span className="block text-xs text-gray-500 mt-1">
                     Updated:{" "}
-                    {new Date(weather.time).toLocaleString("en-US", {
+                    {weather && new Date(weather.time).toLocaleString("en-US", {
                       timeZone: "UTC",
                     })}
                   </span>
@@ -113,6 +113,7 @@ function App() {
       <footer className="mt-8 text-gray-500 text-xs text-center">
         &copy; {new Date().getFullYear()} Weather Now. Powered by Open-Meteo &
         OpenStreetMap.
+        <br />Developed By Tejas Najare aka <a href="https://github.com/Macdox" className="font-bold">Maddox</a>
       </footer>
     </div>
   );
